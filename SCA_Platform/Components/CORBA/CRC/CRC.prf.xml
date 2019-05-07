@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "../dtd/properties.dtd">
+
+<properties>
+	<title>CRC</title>
+	<description>Adds BPSK preamble header information for assembling frames</description>
+	<author>opensca is belong to everyone</author>
+	<simple type="ulong" id="DCE:d3fcc165-da4a-4f8d-af36-8e77c2cbeacc:1" name="resource_id" mode="readonly">
+		<value>0x04030211</value>
+		<units />
+		<kind kindtype="allocation" />
+		<action type="eq" />
+	</simple>
+	<simple type="ushort" id="DCE:f4586b67-f2ea-419c-aaf1-14adafd76e25:1" name="data_mhal_axi_out_target_LD" mode="readonly">
+		<value>0x04a0</value>
+		<units />
+		<kind kindtype="configure" />
+	</simple>
+	<simple type="ushort" id="DCE:37a817c2-bdc7-4f69-8ce9-aaa32ba0eed5:1" name="data_mhal_axi_in_local_LD" mode="readonly">
+		<value>0x0520</value>
+		<units />
+		<kind kindtype="configure" />
+	</simple>
+</properties>
+

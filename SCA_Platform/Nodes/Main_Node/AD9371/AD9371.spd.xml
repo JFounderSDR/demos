@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:b59faa3c-6364-493a-b1ff-94cc3aa9c76d:1" name="AD9371" type="sca_compliant">
+	<title>AD9371</title>
+	<description />
+	<author />
+	<propertyfile type="PRF">
+		<localfile name="AD9371.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="AD9371.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:f950dcc9-43e4-4972-a1d3-a1fb60ee5cc5:1" aepcompliance="sca_compliant">
+		<code type="Executable">
+			<localfile name="AD9371.out" />
+			<entrypoint>AD9371_Main</entrypoint>
+			<stacksize>40960</stacksize>
+			<priority>101</priority>
+		</code>
+		<os name="Linux" version="6.9" />
+		<processor name="Zynq7045-PS" />
+	</implementation>
+</softpkg>
+

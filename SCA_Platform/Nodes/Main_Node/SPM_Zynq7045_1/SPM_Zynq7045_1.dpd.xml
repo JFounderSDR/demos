@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devicepkg id="DCE:1f871352-55c4-4a4f-a571-1eba2eb1be1e:1" name="SPM_Zynq7045_1">
+	<author />
+	<hwdeviceregistration id="DCE:bb0144a3-4d5e-459b-9fae-129014cc69f0:1" name="" version="">
+		<descriptor />
+		<propertyfile type="property">
+			<localfile name="SPM_Zynq7045_1_registration.prf.xml" />
+		</propertyfile>
+		<manufacturer />
+		<modelnumber />
+		<deviceclass />
+	</hwdeviceregistration>
+</devicepkg>
+

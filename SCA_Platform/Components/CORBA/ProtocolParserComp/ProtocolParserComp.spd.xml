@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:f749d4e0-21a7-4e6e-a0e2-50c7a9e03bf4:1" name="ProtocolParserComp" type="sca_compliant">
+	<title>ProtocolParserComp</title>
+	<description />
+	<author />
+	<propertyfile type="PRF">
+		<localfile name="ProtocolParserComp.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="ProtocolParserComp.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:1a3cce16-a6fa-48e2-866b-ee22f00e7ea1:1" aepcompliance="sca_compliant">
+		<code type="Executable">
+			<localfile name="ProtocolParserComp.out" />
+			<entrypoint>ProtocolParserComp_Main</entrypoint>
+			<stacksize>40960</stacksize>
+			<priority>101</priority>
+		</code>
+		<os name="Linux" version="6.9" />
+		<processor name="Zynq7045-PS" />
+	</implementation>
+</softpkg>
+

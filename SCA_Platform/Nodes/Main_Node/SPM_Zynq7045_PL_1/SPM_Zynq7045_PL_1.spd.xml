@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:707cc71e-fa9d-4752-8f06-a456f86ff9e8:1" name="SPM_Zynq7045_PL_1" type="sca_compliant">
+	<title>SPM_Zynq7045_PL_1</title>
+	<description />
+	<author />
+	<propertyfile type="PRF">
+		<localfile name="SPM_Zynq7045_PL_1.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="SPM_Zynq7045_PL_1.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:13427827-a29d-45d9-b90a-6e9fdcdf4095:1" aepcompliance="sca_compliant">
+		<code type="Executable">
+			<localfile name="SPM_Zynq7045_PL_1.out" />
+			<entrypoint>SPM_Zynq7045_PL_1_Main</entrypoint>
+			<stacksize>40960</stacksize>
+			<priority>101</priority>
+		</code>
+		<os name="Linux" version="6.9" />
+		<processor name="Zynq7045-PS" />
+	</implementation>
+</softpkg>
+

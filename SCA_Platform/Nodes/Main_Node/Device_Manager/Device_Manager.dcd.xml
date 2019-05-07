@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE softwareassembly SYSTEM "../../xml/dtd/softwareassembly.dtd">
+
+<deviceconfiguration name="Main_Node" id="DCE:1efe169e-947e-4f5c-a12b-dd93baaa80e5:1">
+	<author />
+	<devicemanagersoftpkg>
+		<localfile name="Device_Manager.spd.xml" />
+	</devicemanagersoftpkg>
+	<componentfiles>
+		<componentfile type="SPD" id="DCE:3aeaafed-988f-463b-87ad-ce9ef4184dc0:1">
+			<localfile name="../AD9371/AD9371.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:4b69c864-f87e-4c66-ad8b-67baf0c55270:1">
+			<localfile name="../MCM_Black_SRIOSW/MCM_Black_SRIOSW.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:97bbd3f8-3293-458a-80d6-e2c9ddba63a0:1">
+			<localfile name="../MCM_Board/MCM_Board.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:fe70bcd1-10d7-4478-9c6c-ead198026fb9:1">
+			<localfile name="../MCM_EtherSW/MCM_EtherSW.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:4587840e-04fe-4bf2-9f8f-81c9ecb6ff32:1">
+			<localfile name="../MCM_Red_SRIOSW/MCM_Red_SRIOSW.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:ba109f60-0553-4824-b93b-72c2d077e520:1">
+			<localfile name="../MCM_Zynq7045/MCM_Zynq7045.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:8d7014f7-25c1-4e45-ae1d-f45f41e3c62d:1">
+			<localfile name="../SPM_Board/SPM_Board.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:440b7a94-42e9-4c7e-9e2c-1b1da99cd67c:1">
+			<localfile name="../SPM_EtherSW/SPM_EtherSW.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:22460199-9c42-495c-a59c-85d8627f2994:1">
+			<localfile name="../MCM_PowerPC2020_MHAL_Device/MHAL_Device.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:7cd41010-17da-45d1-85a9-28e9bc15fbdc:1">
+			<localfile name="../SPM_Zynq7045_PS_1_MHAL_Device/MHAL_Device.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:505c1233-f073-4ed8-81c0-a550131b9c92:1">
+			<localfile name="../SPM_Zynq7045_PS_2_MHAL_Device/MHAL_Device.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:ab574305-30fa-476d-9736-e0ec018251bf:1">
+			<localfile name="../SPM_Zynq7045_PS_1/SPM_Zynq7045_PS_1.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:56e8d2dd-bbcc-4d43-ae08-a733efd05ff8:1">
+			<localfile name="../SPM_Zynq7045_PS_2/SPM_Zynq7045_PS_2.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:57559776-6a55-4600-bc04-cce99188733d:1">
+			<localfile name="../MCM_PowerPC2020/MCM_PowerPC2020.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:616ba08d-87e6-48a9-b60c-3d7407dda2bf:1">
+			<localfile name="../SPM_Zynq7045_PL_1/SPM_Zynq7045_PL_1.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:f983092e-5a1d-47bf-b5cd-8ac6374b2733:1">
+			<localfile name="../SPM_Zynq7045_PL_2/SPM_Zynq7045_PL_2.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:81a53264-47e7-4b0d-b18a-39b6c9a0eca1:1">
+			<localfile name="../SPM_Zynq7045_1/SPM_Zynq7045_1.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:2b709fda-04df-4f2a-970f-727bc1f397fc:1">
+			<localfile name="../SPM_Zynq7045_2/SPM_Zynq7045_2.spd.xml" />
+		</componentfile>
+	</componentfiles>
+	<partitioning>
+		<componentplacement>
+			<componentfileref refid="DCE:3aeaafed-988f-463b-87ad-ce9ef4184dc0:1" />
+			<componentinstantiation id="DCE:9f11697c-50e0-40d0-a824-0ebf8f18e98d:1">
+				<usagename>AD9371</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../AD9371/AD9371.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+<!-- 	<componentplacement>
+			<componentfileref refid="DCE:4b69c864-f87e-4c66-ad8b-67baf0c55270:1" />
+			<componentinstantiation id="DCE:388c0bb2-259c-4175-a8a8-2a84bbae81f7:1">
+				<usagename>MCM_Black_SRIOSW</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../MCM_Black_SRIOSW/MCM_Black_SRIOSW.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:97bbd3f8-3293-458a-80d6-e2c9ddba63a0:1" />
+			<componentinstantiation id="DCE:218e1445-3750-4741-bee9-559e667999ca:1">
+				<usagename>MCM_Board</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../MCM_Board/MCM_Board.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:fe70bcd1-10d7-4478-9c6c-ead198026fb9:1" />
+			<componentinstantiation id="DCE:12ce3ca6-6eff-4a92-bb71-e63f8eca021f:1">
+				<usagename>MCM_EtherSW</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../MCM_EtherSW/MCM_EtherSW.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:4587840e-04fe-4bf2-9f8f-81c9ecb6ff32:1" />
+			<componentinstantiation id="DCE:b4d3ac58-d99c-462e-beed-cc89bf6435a5:1">
+				<usagename>MCM_Red_SRIOSW</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../MCM_Red_SRIOSW/MCM_Red_SRIOSW.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:ba109f60-0553-4824-b93b-72c2d077e520:1" />
+			<componentinstantiation id="DCE:717a1031-9314-4587-8cee-084b925aa1d5:1">
+				<usagename>MCM_Zynq7045</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../MCM_Zynq7045/MCM_Zynq7045.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:8d7014f7-25c1-4e45-ae1d-f45f41e3c62d:1" />
+			<componentinstantiation id="DCE:887be7cc-e512-4d18-bbe1-66864e7f781a:1">
+				<usagename>SPM_Board</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../SPM_Board/SPM_Board.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:440b7a94-42e9-4c7e-9e2c-1b1da99cd67c:1" />
+			<componentinstantiation id="DCE:66348051-8c69-4cf5-bcce-efbf5ba04b2b:1">
+				<usagename>SPM_EtherSW</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../SPM_EtherSW/SPM_EtherSW.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:22460199-9c42-495c-a59c-85d8627f2994:1" />
+			<componentinstantiation id="DCE:fdcc06eb-8167-4cca-b13d-930c9be4139a:1">
+				<usagename>MHAL_Device</usagename>
+			</componentinstantiation>
+			<compositepartofdevice refid="DCE:39920c9b-92cd-4c23-85fd-4e80f2a70ac1:1" />
+			<deployondevice refid="DCE:39920c9b-92cd-4c23-85fd-4e80f2a70ac1:1" />
+			<devicepkgfile>
+				<localfile name="../MCM_PowerPC2020_MHAL_Device/MHAL_Device.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>-->
+		<componentplacement>
+			<componentfileref refid="DCE:7cd41010-17da-45d1-85a9-28e9bc15fbdc:1" />
+			<componentinstantiation id="DCE:2b85dff5-d18f-4134-a275-498172b2b74f:1">
+				<usagename>MHAL_Device</usagename>
+			</componentinstantiation>
+			<compositepartofdevice refid="DCE:19e69978-b39a-4011-b0d8-b7c80137af82:1" />
+			<deployondevice refid="DCE:19e69978-b39a-4011-b0d8-b7c80137af82:1" />
+			<devicepkgfile>
+				<localfile name="../SPM_Zynq7045_PS_1_MHAL_Device/MHAL_Device.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement> 
+<!-- 		<componentplacement>
+			<componentfileref refid="DCE:505c1233-f073-4ed8-81c0-a550131b9c92:1" />
+			<componentinstantiation id="DCE:6774df71-33a4-4c4b-90e2-e8f7241b374f:1">
+				<usagename>MHAL_Device</usagename>
+			</componentinstantiation>
+			<compositepartofdevice refid="DCE:0e95a447-0bbe-4e74-8ba0-f76678719146:1" />
+			<deployondevice refid="DCE:0e95a447-0bbe-4e74-8ba0-f76678719146:1" />
+			<devicepkgfile>
+				<localfile name="../SPM_Zynq7045_PS_2_MHAL_Device/MHAL_Device.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement> -->
+<!-- 		<componentplacement>
+			<componentfileref refid="DCE:56e8d2dd-bbcc-4d43-ae08-a733efd05ff8:1" />
+			<componentinstantiation id="DCE:0e95a447-0bbe-4e74-8ba0-f76678719146:1">
+				<usagename>SPM_Zynq7045_PS_2</usagename>
+			</componentinstantiation>
+			<compositepartofdevice refid="DCE:b181d2aa-0875-489f-8db5-077f2282ef8b:1" />
+			<deployondevice refid="DCE:b181d2aa-0875-489f-8db5-077f2282ef8b:1" />
+			<devicepkgfile>
+				<localfile name="../SPM_Zynq7045_PS_2/SPM_Zynq7045_PS_2.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement> -->
+ 		<componentplacement>
+			<componentfileref refid="DCE:ab574305-30fa-476d-9736-e0ec018251bf:1" />
+			<componentinstantiation id="DCE:19e69978-b39a-4011-b0d8-b7c80137af82:1">
+				<usagename>SPM_Zynq7045_PS_1</usagename>
+			</componentinstantiation>
+			<compositepartofdevice refid="DCE:162b3d89-d1db-4f87-8e3c-cc8c3afbfd83:1" />
+			<deployondevice refid="DCE:162b3d89-d1db-4f87-8e3c-cc8c3afbfd83:1" />
+			<devicepkgfile>
+				<localfile name="../SPM_Zynq7045_PS_1/SPM_Zynq7045_PS_1.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement> 
+<!--		<componentplacement>
+			<componentfileref refid="DCE:57559776-6a55-4600-bc04-cce99188733d:1" />
+			<componentinstantiation id="DCE:39920c9b-92cd-4c23-85fd-4e80f2a70ac1:1">
+				<usagename>MCM_PowerPC2020</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../MCM_PowerPC2020/MCM_PowerPC2020.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement> -->
+<!-- 		<componentplacement>
+			<componentfileref refid="DCE:f983092e-5a1d-47bf-b5cd-8ac6374b2733:1" />
+			<componentinstantiation id="DCE:6a08be5a-a8ce-48c6-8034-6b07015344b6:1">
+				<usagename>SPM_Zynq7045_PL_2</usagename>
+			</componentinstantiation>
+			<compositepartofdevice refid="DCE:b181d2aa-0875-489f-8db5-077f2282ef8b:1" />
+			<deployondevice refid="DCE:b181d2aa-0875-489f-8db5-077f2282ef8b:1" />
+			<devicepkgfile>
+				<localfile name="../SPM_Zynq7045_PL_2/SPM_Zynq7045_PL_2.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement> -->
+		<componentplacement>
+			<componentfileref refid="DCE:616ba08d-87e6-48a9-b60c-3d7407dda2bf:1" />
+			<componentinstantiation id="DCE:9367b1d7-f404-461f-9b61-4d7525c2f59e:1">
+				<usagename>SPM_Zynq7045_PL_1</usagename>
+			</componentinstantiation>
+			<compositepartofdevice refid="DCE:162b3d89-d1db-4f87-8e3c-cc8c3afbfd83:1" />
+			<deployondevice refid="DCE:162b3d89-d1db-4f87-8e3c-cc8c3afbfd83:1" />
+			<devicepkgfile>
+				<localfile name="../SPM_Zynq7045_PL_1/SPM_Zynq7045_PL_1.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:81a53264-47e7-4b0d-b18a-39b6c9a0eca1:1" />
+			<componentinstantiation id="DCE:162b3d89-d1db-4f87-8e3c-cc8c3afbfd83:1">
+				<usagename>SPM_Zynq7045_1</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../SPM_Zynq7045_1/SPM_Zynq7045_1.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+<!-- 		<componentplacement>
+			<componentfileref refid="DCE:2b709fda-04df-4f2a-970f-727bc1f397fc:1" />
+			<componentinstantiation id="DCE:b181d2aa-0875-489f-8db5-077f2282ef8b:1">
+				<usagename>SPM_Zynq7045_2</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../SPM_Zynq7045_2/SPM_Zynq7045_2.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement> -->
+	</partitioning>
+	<connections />
+	<domainmanager>
+		<namingservice name="Domain_Manager" />
+	</domainmanager>
+	<filesystemnames>
+		<filesystemname mountname="/" deviceid="" />
+	</filesystemnames>
+</deviceconfiguration>
+

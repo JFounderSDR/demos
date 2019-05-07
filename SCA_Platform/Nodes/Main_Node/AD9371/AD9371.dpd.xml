@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devicepkg id="DCE:ac390dd2-8ee3-4d18-8bc5-e7f1f4727e46:1" name="AD9371">
+	<author />
+	<hwdeviceregistration id="DCE:f46e36d8-ffcd-4f4d-8158-e902386e3598:1" name="" version="">
+		<descriptor />
+		<propertyfile type="property">
+			<localfile name="AD9371_registration.prf.xml" />
+		</propertyfile>
+		<manufacturer />
+		<modelnumber />
+		<deviceclass />
+	</hwdeviceregistration>
+</devicepkg>
+

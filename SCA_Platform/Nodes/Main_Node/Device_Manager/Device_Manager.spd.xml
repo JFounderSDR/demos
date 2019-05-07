@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:e8d26086-4df1-4ea4-926c-36f6c4a82e5a:1" name="Device_Manager" type="sca_compliant">
+	<title>Device_Manager</title>
+	<description />
+	<author />
+	<propertyfile type="PRF">
+		<localfile name="Device_Manager.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="Device_Manager.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:9fcbfa72-bee8-4f68-a130-0a41e36414cc:1" aepcompliance="sca_compliant">
+		<code type="Executable">
+			<localfile name="Device_Manager.out" />
+			<entrypoint>Device_Manager_Main</entrypoint>
+			<stacksize>40960</stacksize>
+			<priority>101</priority>
+		</code>
+		<os name="Linux" version="6.9" />
+		<processor name="PowerPC2020" />
+	</implementation>
+</softpkg>
+
