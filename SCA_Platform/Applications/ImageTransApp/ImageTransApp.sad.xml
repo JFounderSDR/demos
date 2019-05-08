@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE softwareassembly SYSTEM "../../xml/dtd/softwareassembly.dtd">
+
+<softwareassembly id="DCE:f9494b24-80f9-473e-8c41-14b2777d4f67:1" name="ImageTransApp">
+	<author />
+	<componentfiles>
+		<componentfile id="DCE:2a8f3070-b9c8-469f-bbae-f28b06f1c275:1" type="SPD">
+			<localfile name="Components/CORBA/RxTxComp/RxTxComp.spd.xml" />
+		</componentfile>
+		<componentfile id="DCE:f1b84fe2-cfcf-4459-b145-02face578d5c:1" type="SPD">
+			<localfile name="Components/CORBA/ImageTrans_Ctroller/ImageTrans_Ctroller.spd.xml" />
+		</componentfile>
+		<componentfile id="DCE:7812fa3d-453c-492b-bfce-0e9c21b65ad8:1" type="SPD">
+			<localfile name="Components/Non-CORBA/Modem/Modem.spd.xml" />
+		</componentfile>
+	</componentfiles>
+	<partitioning>
+		<componentplacement>
+			<componentfileref refid="DCE:f1b84fe2-cfcf-4459-b145-02face578d5c:1" />
+			<componentinstantiation id="DCE:5dbeb985-654d-4571-8bc9-9758d3337a70:1">
+				<usagename>ImageTrans_Ctroller</usagename>
+				<findcomponent>
+					<namingservice name="ImageTrans_Ctroller" />
+				</findcomponent>
+			</componentinstantiation>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:2a8f3070-b9c8-469f-bbae-f28b06f1c275:1" />
+			<componentinstantiation id="DCE:fefaced7-8488-400e-8c41-6269b2eed15b:1">
+				<usagename>RxTxComp</usagename>
+				<findcomponent>
+					<namingservice name="RxTxComp" />
+				</findcomponent>
+			</componentinstantiation>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:7812fa3d-453c-492b-bfce-0e9c21b65ad8:1" />
+			<componentinstantiation id="DCE:73b43fbb-a8cf-444b-9789-04064e9624cf:1">
+				<usagename>Modem</usagename>
+				<findcomponent>
+					<namingservice name="Modem" />
+				</findcomponent>
+			</componentinstantiation>
+		</componentplacement>
+	</partitioning>
+	<assemblycontroller>
+		<componentinstantiationref refid="DCE:5dbeb985-654d-4571-8bc9-9758d3337a70:1" />
+	</assemblycontroller>
+	<connections>
+		<connectinterface id="DCE:ce45d995-bd55-4a76-8426-90582e9b929a:1">
+			<usesport>
+				<usesidentifier>control_out</usesidentifier>
+				<componentinstantiationref refid="DCE:5dbeb985-654d-4571-8bc9-9758d3337a70:1" />
+				<findby>
+					<namingservice name="ImageTrans_Ctroller/control_out" />
+				</findby>
+			</usesport>
+			<providesport>
+				<providesidentifier>control_in</providesidentifier>
+				<componentinstantiationref refid="DCE:fefaced7-8488-400e-8c41-6269b2eed15b:1" />
+			</providesport>
+		</connectinterface>
+		<connectinterface id="DCE:7d876099-db18-46e2-af3a-e3908349d1bc:1">
+			<usesport>
+				<usesidentifier>external_data_out</usesidentifier>
+				<componentinstantiationref refid="DCE:f9494b24-80f9-473e-8c41-14b2777d4f67:1" />
+				<findby>
+					<namingservice name="ImageTransApp/external_data_out" />
+				</findby>
+			</usesport>
+			<usesport>
+				<usesidentifier>data_out</usesidentifier>
+				<componentinstantiationref refid="DCE:fefaced7-8488-400e-8c41-6269b2eed15b:1" />
+				<findby>
+					<namingservice name="RxTxComp/data_out" />
+				</findby>
+			</usesport>
+		</connectinterface>
+		<connectinterface id="DCE:bdced5ea-964e-485d-be9a-78e6316e5726:1">
+			<providesport>
+				<providesidentifier>external_data_in</providesidentifier>
+				<componentinstantiationref refid="DCE:f9494b24-80f9-473e-8c41-14b2777d4f67:1" />
+				<findby>
+					<namingservice name="ImageTransApp/external_data_in" />
+				</findby>
+			</providesport>
+			<providesport>
+				<providesidentifier>data_in</providesidentifier>
+				<componentinstantiationref refid="DCE:fefaced7-8488-400e-8c41-6269b2eed15b:1" />
+				<findby>
+					<namingservice name="RxTxComp/data_in" />
+				</findby>
+			</providesport>
+		</connectinterface>
+		<connectinterface id="DCE:9e5f9c9d-a111-4e54-944a-131713aae484:1">
+			<usesport>
+				<usesidentifier>data_mhal_axi_out</usesidentifier>
+				<componentinstantiationref refid="DCE:fefaced7-8488-400e-8c41-6269b2eed15b:1" />
+				<findby>
+					<namingservice name="RxTxComp/data_mhal_axi_out" />
+				</findby>
+			</usesport>
+			<providesport>
+				<providesidentifier>mhal_axi_data_in</providesidentifier>
+				<componentinstantiationref refid="DCE:73b43fbb-a8cf-444b-9789-04064e9624cf:1" />
+				<findby>
+					<namingservice name="MHAL_Device/mhal_axi_data_in" />
+				</findby>
+			</providesport>
+		</connectinterface>
+		<connectinterface id="DCE:73f6d978-7186-436e-8ff5-3ba651f3da9b:1">
+			<usesport>
+				<usesidentifier>mhal_axi_data_out</usesidentifier>
+				<componentinstantiationref refid="DCE:73b43fbb-a8cf-444b-9789-04064e9624cf:1" />
+				<findby>
+					<namingservice name="MHAL_Device/mhal_axi_data_out" />
+				</findby>
+			</usesport>
+			<providesport>
+				<providesidentifier>data_mhal_axi_in</providesidentifier>
+				<componentinstantiationref refid="DCE:fefaced7-8488-400e-8c41-6269b2eed15b:1" />
+				<findby>
+					<namingservice name="RxTxComp/data_mhal_axi_in" />
+				</findby>
+			</providesport>
+		</connectinterface>
+	</connections>
+	<externalports>
+		<port>
+			<usesidentifier>external_data_out</usesidentifier>
+			<componentinstantiationref refid="DCE:fefaced7-8488-400e-8c41-6269b2eed15b:1" />
+			<findby>
+				<namingservice name="ImageTransApp/external_data_out" />
+			</findby>
+		</port>
+		<port>
+			<providesidentifier>external_data_in</providesidentifier>
+			<componentinstantiationref refid="DCE:fefaced7-8488-400e-8c41-6269b2eed15b:1" />
+			<findby>
+				<namingservice name="ImageTransApp/external_data_in" />
+			</findby>
+		</port>
+	</externalports>
+</softwareassembly>
+

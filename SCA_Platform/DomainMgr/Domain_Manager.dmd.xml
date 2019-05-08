@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE domainmanagerconfiguration SYSTEM "../xml/dtd/domainmanagerconfiguration.dtd">
 
-<domainmanagerconfiguration name="SCA_Platform" id="DCE:92b1af8e-aa77-42bf-86cf-b6692cdad1d4:1">
+<domainmanagerconfiguration name="SCA_Platform" id="DCE:ff89b826-ff89-48a3-ac18-da62b0a61a2f:1">
 	<author />
 	<domainmanagersoftpkg>
 		<localfile name="Domain_Manager.spd.xml" />
 	</domainmanagersoftpkg>
 	<devicemanagersoftpkg>
 		<devicemanager>
-			<localfile name="Main_Node/Device_Manager.spd.xml" />
+			<localfile name="Single_Node/Device_Manager.spd.xml" />
 		</devicemanager>
 	</devicemanagersoftpkg>
 	<services>
@@ -19,7 +19,7 @@
 			</findby>
 		</service>
 	</services>
-	<nameservice name="Naming_Service" id="DCE:696ead2f-38fb-4c6e-b7a2-f717095c65f9:1">
+	<nameservice name="Naming_Service" id="DCE:9179e874-373d-4e81-9158-f4ba8effbe19:1">
 		<usesidentifier>Naming_Service</usesidentifier>
 		<localfile name="" />
 	</nameservice>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "../dtd/properties.dtd">
+
+<properties>
+	<title>Modem</title>
+	<description>Adds BPSK preamble header information for assembling frames</description>
+	<author>open Team</author>
+	<simple type="string" id="DCE:7a2cb7bd-d184-47ba-9a19-14a0f94e6286:1" name="soc_model" mode="readonly">
+		<value>XC7Z035</value>
+		<units />
+		<kind kindtype="allocation" />
+		<action type="eq" />
+	</simple>
+	<simple type="string" id="DCE:2786dc64-d0eb-4087-93fa-7190dc636080:1" name="pl_architecture" mode="readonly">
+		<value>Kintex-7</value>
+		<units />
+		<kind kindtype="allocation" />
+		<action type="eq" />
+	</simple>
+</properties>
+

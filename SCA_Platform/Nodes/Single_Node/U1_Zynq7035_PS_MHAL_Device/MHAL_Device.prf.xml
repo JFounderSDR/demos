@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "../dtd/properties.dtd">
+
+<properties>
+	<title>MHAL_Device</title>
+	<description>Adds BPSK preamble header information for assembling frames</description>
+	<author>opensca is belong to everyone</author>
+	<simple type="boolean" id="DCE:7a35162b-1e92-4bc8-90e6-0dde8f477b6c:1" name="health_state" mode="readwrite">
+		<value>true</value>
+		<kind kindtype="configure" />
+	</simple>
+	<simple type="string" id="DCE:bce7ce2d-b61c-49ec-98e1-c44e0bae083b:1" name="bus_type" mode="readonly">
+		<value>AXI</value>
+		<kind kindtype="configure" />
+	</simple>
+	<simple type="ulong" id="DCE:2d08e2d2-4963-44fe-9d5f-b0b17679e952:1" name="bus_rate" mode="readonly">
+		<value>800</value>
+		<units>Mbps</units>
+		<kind kindtype="configure" />
+	</simple>
+</properties>
+

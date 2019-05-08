@@ -17,8 +17,8 @@
 			<stacksize>20480</stacksize>
 			<priority>101</priority>
 		</code>
-		<os name="Linux" version="6.9" />
-		<processor name="PowerPC2020" />
+		<os name="Linux" version="4.1" />
+		<processor name="Zynq7035-PS" />
 	</implementation>
 </softpkg>
 

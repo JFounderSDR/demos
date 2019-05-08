@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "../dtd/properties.dtd">
+
+<properties>
+	<title>ImageTrans_Ctroller</title>
+	<description>Adds BPSK preamble header information for assembling frames</description>
+	<author>open Team</author>
+	<simple type="string" id="DCE:7a2cb7bd-d184-47ba-9a19-14a0f94e6286:1" name="soc_model" mode="readonly">
+		<value>XC7Z035</value>
+		<units />
+		<kind kindtype="allocation" />
+		<action type="eq" />
+	</simple>
+	<simple type="string" id="DCE:04a9d833-be0c-4fe6-a5c6-a67e1ca7dcfa:1" name="business_type" mode="readonly">
+		<value>image</value>
+		<units />
+		<kind kindtype="configure" />
+	</simple>
+	<simple type="boolean" id="DCE:6cb56ba8-0bb9-455e-b34f-cba88b481bff:1" name="connection" mode="readwrite">
+		<value>false</value>
+		<units />
+		<kind kindtype="configure" />
+	</simple>
+	<simple type="boolean" id="DCE:085d86cb-1d1c-45fd-94ed-afa8c0e98414:1" name="start_status" mode="readwrite">
+		<value>false</value>
+		<units />
+		<kind kindtype="configure" />
+	</simple>
+</properties>
+

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE softwareassembly SYSTEM "../../xml/dtd/softwareassembly.dtd">
+
+<softwareassembly id="DCE:62b0d2a8-5839-4889-b3bf-8354b0a4d1b9:1" name="AudioTransApp">
+	<author />
+	<componentfiles>
+		<componentfile id="DCE:de0c9923-25cb-4bd3-be6e-cc38c4c84c11:1" type="SPD">
+			<localfile name="Components/CORBA/AudioTrans_Ctroller/AudioTrans_Ctroller.spd.xml" />
+		</componentfile>
+		<componentfile id="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1" type="SPD">
+			<localfile name="Components/CORBA/CRCComp/CRCComp.spd.xml" />
+		</componentfile>
+		<componentfile id="DCE:bc4b261b-fba3-4bce-bd7a-0b960c4b10a7:1" type="SPD">
+			<localfile name="Components/CORBA/AudioCodeCComp/AudioCodeCComp.spd.xml" />
+		</componentfile>
+		<componentfile id="DCE:7812fa3d-453c-492b-bfce-0e9c21b65ad8:1" type="SPD">
+			<localfile name="Components/Non-CORBA/Modem/Modem.spd.xml" />
+		</componentfile>
+	</componentfiles>
+	<partitioning>
+		<componentplacement>
+			<componentfileref refid="DCE:bc4b261b-fba3-4bce-bd7a-0b960c4b10a7:1" />
+			<componentinstantiation id="DCE:74fcc347-c93d-4657-873c-fc397ce39349:1">
+				<usagename>AudioCodeCComp</usagename>
+				<findcomponent>
+					<namingservice name="AudioCodeCComp" />
+				</findcomponent>
+			</componentinstantiation>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:de0c9923-25cb-4bd3-be6e-cc38c4c84c11:1" />
+			<componentinstantiation id="DCE:c669c3b0-d204-448a-a3a0-b08736447942:1">
+				<usagename>AudioTrans_Ctroller</usagename>
+				<findcomponent>
+					<namingservice name="AudioTrans_Ctroller" />
+				</findcomponent>
+			</componentinstantiation>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1" />
+			<componentinstantiation id="DCE:1f415b0b-42ee-49db-982b-171d49e4ccb3:1">
+				<usagename>CRCComp</usagename>
+				<findcomponent>
+					<namingservice name="CRCComp" />
+				</findcomponent>
+			</componentinstantiation>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:7812fa3d-453c-492b-bfce-0e9c21b65ad8:1" />
+			<componentinstantiation id="DCE:226a697d-77c4-4691-b725-fc3391a060da:1">
+				<usagename>Modem</usagename>
+				<findcomponent>
+					<namingservice name="Modem" />
+				</findcomponent>
+			</componentinstantiation>
+		</componentplacement>
+	</partitioning>
+	<assemblycontroller>
+		<componentinstantiationref refid="DCE:c669c3b0-d204-448a-a3a0-b08736447942:1" />
+	</assemblycontroller>
+	<connections>
+		<connectinterface id="DCE:8546185e-fa3c-4382-a6c8-4eae578bd8e9:1">
+			<usesport>
+				<usesidentifier>control_out</usesidentifier>
+				<componentinstantiationref refid="DCE:c669c3b0-d204-448a-a3a0-b08736447942:1" />
+				<findby>
+					<namingservice name="AudioTrans_Ctroller/control_out" />
+				</findby>
+			</usesport>
+			<providesport>
+				<providesidentifier>control_in</providesidentifier>
+				<componentinstantiationref refid="DCE:74fcc347-c93d-4657-873c-fc397ce39349:1" />
+			</providesport>
+		</connectinterface>
+		<connectinterface id="DCE:be63a7a5-2851-4d5c-8644-7ea3cdf5111f:1">
+			<usesport>
+				<usesidentifier>external_data_out</usesidentifier>
+				<componentinstantiationref refid="DCE:62b0d2a8-5839-4889-b3bf-8354b0a4d1b9:1" />
+				<findby>
+					<namingservice name="AudioTransApp/external_data_out" />
+				</findby>
+			</usesport>
+			<usesport>
+				<usesidentifier>user_data_out</usesidentifier>
+				<componentinstantiationref refid="DCE:74fcc347-c93d-4657-873c-fc397ce39349:1" />
+				<findby>
+					<namingservice name="AudioCodeCComp/user_data_out" />
+				</findby>
+			</usesport>
+		</connectinterface>
+		<connectinterface id="DCE:cbf33f2f-f6b9-4bd5-80d6-0ed396ed7bab:1">
+			<providesport>
+				<providesidentifier>external_data_in</providesidentifier>
+				<componentinstantiationref refid="DCE:62b0d2a8-5839-4889-b3bf-8354b0a4d1b9:1" />
+				<findby>
+					<namingservice name="AudioTransApp/external_data_in" />
+				</findby>
+			</providesport>
+			<providesport>
+				<providesidentifier>user_data_in</providesidentifier>
+				<componentinstantiationref refid="DCE:74fcc347-c93d-4657-873c-fc397ce39349:1" />
+				<findby>
+					<namingservice name="AudioCodeCComp/user_data_in" />
+				</findby>
+			</providesport>
+		</connectinterface>
+		<connectinterface id="DCE:f1382dc0-4e9a-4441-9d56-86d020080d7c:1">
+			<usesport>
+				<usesidentifier>data_out</usesidentifier>
+				<componentinstantiationref refid="DCE:74fcc347-c93d-4657-873c-fc397ce39349:1" />
+				<findby>
+					<namingservice name="AudioCodeCComp/data_out" />
+				</findby>
+			</usesport>
+			<providesport>
+				<providesidentifier>data_in</providesidentifier>
+				<componentinstantiationref refid="DCE:1f415b0b-42ee-49db-982b-171d49e4ccb3:1" />
+				<findby>
+					<namingservice name="CRCComp/data_in" />
+				</findby>
+			</providesport>
+		</connectinterface>
+		<connectinterface id="DCE:7fed78c2-3ace-4577-adda-d3fb5f8624c0:1">
+			<usesport>
+				<usesidentifier>data_out</usesidentifier>
+				<componentinstantiationref refid="DCE:1f415b0b-42ee-49db-982b-171d49e4ccb3:1" />
+				<findby>
+					<namingservice name="CRCComp/data_out" />
+				</findby>
+			</usesport>
+			<providesport>
+				<providesidentifier>data_in</providesidentifier>
+				<componentinstantiationref refid="DCE:74fcc347-c93d-4657-873c-fc397ce39349:1" />
+				<findby>
+					<namingservice name="AudioCodeCComp/data_in" />
+				</findby>
+			</providesport>
+		</connectinterface>
+		<connectinterface id="DCE:7fad6cfb-fd5e-4d56-9d93-510b33629714:1">
+			<usesport>
+				<usesidentifier>control_out</usesidentifier>
+				<componentinstantiationref refid="DCE:c669c3b0-d204-448a-a3a0-b08736447942:1" />
+				<findby>
+					<namingservice name="AudioTrans_Ctroller/control_out" />
+				</findby>
+			</usesport>
+			<providesport>
+				<providesidentifier>control_in</providesidentifier>
+				<componentinstantiationref refid="DCE:1f415b0b-42ee-49db-982b-171d49e4ccb3:1" />
+			</providesport>
+		</connectinterface>
+		<connectinterface id="DCE:88483627-af64-47a5-8afb-e01e86405d0f:1">
+			<usesport>
+				<usesidentifier>mhal_axi_data_out</usesidentifier>
+				<componentinstantiationref refid="DCE:226a697d-77c4-4691-b725-fc3391a060da:1" />
+				<findby>
+					<namingservice name="MHAL_Device/mhal_axi_data_out" />
+				</findby>
+			</usesport>
+			<providesport>
+				<providesidentifier>data_mhal_axi_in</providesidentifier>
+				<componentinstantiationref refid="DCE:1f415b0b-42ee-49db-982b-171d49e4ccb3:1" />
+				<findby>
+					<namingservice name="CRCComp/data_mhal_axi_in" />
+				</findby>
+			</providesport>
+		</connectinterface>
+		<connectinterface id="DCE:d09e4a69-674b-4f6c-84be-456d1d82100e:1">
+			<usesport>
+				<usesidentifier>data_mhal_axi_out</usesidentifier>
+				<componentinstantiationref refid="DCE:1f415b0b-42ee-49db-982b-171d49e4ccb3:1" />
+				<findby>
+					<namingservice name="CRCComp/data_mhal_axi_out" />
+				</findby>
+			</usesport>
+			<providesport>
+				<providesidentifier>mhal_axi_data_in</providesidentifier>
+				<componentinstantiationref refid="DCE:226a697d-77c4-4691-b725-fc3391a060da:1" />
+				<findby>
+					<namingservice name="MHAL_Device/mhal_axi_data_in" />
+				</findby>
+			</providesport>
+		</connectinterface>
+	</connections>
+	<externalports>
+		<port>
+			<usesidentifier>external_data_out</usesidentifier>
+			<componentinstantiationref refid="DCE:74fcc347-c93d-4657-873c-fc397ce39349:1" />
+			<findby>
+				<namingservice name="AudioTransApp/external_data_out" />
+			</findby>
+		</port>
+		<port>
+			<providesidentifier>external_data_in</providesidentifier>
+			<componentinstantiationref refid="DCE:74fcc347-c93d-4657-873c-fc397ce39349:1" />
+			<findby>
+				<namingservice name="AudioTransApp/external_data_in" />
+			</findby>
+		</port>
+	</externalports>
+</softwareassembly>
+

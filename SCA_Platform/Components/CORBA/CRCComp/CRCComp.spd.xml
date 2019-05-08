@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1" name="CRCComp" type="sca_compliant">
+	<title>CRCComp</title>
+	<description />
+	<author>open Team</author>
+	<propertyfile type="PRF">
+		<localfile name="CRCComp.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="CRCComp.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:d3a2795a-80b2-4f34-8e20-f728980954c8:1" aepcompliance="sca_compliant">
+		<code type="Executable">
+			<localfile name="CRCComp.out" />
+			<entrypoint>CRCComp_Main</entrypoint>
+			<stacksize>40960</stacksize>
+			<priority>101</priority>
+		</code>
+		<os name="Linux" version="4.1" />
+		<processor name="Zynq7035-PS" />
+	</implementation>
+</softpkg>
+

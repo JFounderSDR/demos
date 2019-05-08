@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "../dtd/properties.dtd">
+
+<properties>
+	<title>U1_Zynq7035</title>
+	<description>Adds BPSK preamble header information for assembling frames</description>
+	<author>open Team</author>
+	<simple type="boolean" id="DCE:7a35162b-1e92-4bc8-90e6-0dde8f477b6c:1" name="health_state" mode="readwrite">
+		<value>true</value>
+		<kind kindtype="configure" />
+	</simple>
+	<simple type="string" id="DCE:os_name:1" name="os_name" mode="readonly">
+		<value>Linux</value>
+		<units />
+		<kind kindtype="allocation" />
+		<action type="eq" />
+	</simple>
+	<simple type="string" id="DCE:processor_name:1" name="processor_name" mode="readonly">
+		<value>Zynq7035-PS</value>
+		<units />
+		<kind kindtype="allocation" />
+		<action type="eq" />
+	</simple>
+</properties>
+

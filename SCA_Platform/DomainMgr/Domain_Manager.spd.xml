@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<softpkg id="DCE:46cb969f-e1e7-4bd6-9b82-028971de6e63:1" name="Domain_Manager" type="sca_compliant">
+<softpkg id="DCE:8b577a13-45ec-4844-a666-9c731682a694:1" name="Domain_Manager" type="sca_compliant">
 	<title>Domain_Manager</title>
 	<description />
 	<author />
@@ -9,15 +9,15 @@
 	<descriptor type="SCD">
 		<localfile name="Domain_Manager.scd.xml" />
 	</descriptor>
-	<implementation id="DCE:b810f11f-9878-4123-afa3-3a836206a0f4:1" aepcompliance="sca_compliant">
+	<implementation id="DCE:8a6d4926-7b77-4fec-a322-0c1d8e0c2690:1" aepcompliance="sca_compliant">
 		<code type="Executable">
 			<localfile name="Domain_Manager.out" />
 			<entrypoint>Domain_Manager_Main</entrypoint>
 			<stacksize>40960</stacksize>
 			<priority>101</priority>
 		</code>
-		<os name="Linux" version="6.9" />
-		<processor name="PowerPC2020" />
+		<os name="Linux" version="4.1" />
+		<processor name="Zynq7035-PS" />
 	</implementation>
 </softpkg>
 

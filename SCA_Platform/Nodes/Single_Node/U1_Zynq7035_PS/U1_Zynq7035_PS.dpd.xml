@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devicepkg id="DCE:b70f8ae6-1b00-477e-b033-29e8573735b9:1" name="U1_Zynq7035_PS">
+	<author>open Team</author>
+	<hwdeviceregistration id="DCE:559c6908-4bba-4319-8d84-ba72d173a705:1" name="" version="">
+		<descriptor />
+		<propertyfile type="property">
+			<localfile name="U1_Zynq7035_PS_registration.prf.xml" />
+		</propertyfile>
+		<manufacturer />
+		<modelnumber />
+		<deviceclass />
+	</hwdeviceregistration>
+</devicepkg>
+
