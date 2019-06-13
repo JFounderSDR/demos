@@ -5,8 +5,8 @@
 	<title>U1_Zynq7035_PS</title>
 	<description>Adds BPSK preamble header information for assembling frames</description>
 	<author>open Team</author>
-	<simple type="boolean" id="DCE:7a35162b-1e92-4bc8-90e6-0dde8f477b6c:1" name="health_state" mode="readwrite">
-		<value>true</value>
+	<simple type="boolean" id="DCE:b591a1fb-6082-4bf8-921b-163daba64613:1" name="is_board" mode="readonly">
+		<value>false</value>
 		<kind kindtype="configure" />
 	</simple>
 	<simple type="string" id="DCE:1cda5ade-90ce-4347-9ecd-47db1fb599fa:1" name="memory_model" mode="readonly">
@@ -28,6 +28,10 @@
 	<simple type="ulong" id="DCE:7117ef91-3657-422a-9695-e79f8d39bfdd:1" name="working_frequency" mode="readonly">
 		<value>667</value>
 		<units>M</units>
+		<kind kindtype="configure" />
+	</simple>
+	<simple type="boolean" id="DCE:7a35162b-1e92-4bc8-90e6-0dde8f477b6c:1" name="health_state" mode="readwrite">
+		<value>true</value>
 		<kind kindtype="configure" />
 	</simple>
 	<simple type="string" id="DCE:os_name:1" name="os_name" mode="readonly">

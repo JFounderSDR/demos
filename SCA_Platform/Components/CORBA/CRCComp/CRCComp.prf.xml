@@ -21,7 +21,7 @@
 		<units />
 		<kind kindtype="configure" />
 	</simple>
-	<simple type="ushort" id="DCE:96acf915-e92f-4065-8050-1982a9bf790b:1" name="data_mhal_axi_out_target_LD" mode="readonly">
+	<simple type="ushort" id="DCE:59d888d5-15e6-413b-aa5c-bd344f040998:1" name="data_mhal_axi_out_target_LD" mode="readonly">
 		<value>0x04a0</value>
 		<kind kindtype="configure" />
 	</simple>

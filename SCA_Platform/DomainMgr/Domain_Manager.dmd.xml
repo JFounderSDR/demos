@@ -11,15 +11,8 @@
 			<localfile name="Single_Node/Device_Manager.spd.xml" />
 		</devicemanager>
 	</devicemanagersoftpkg>
-	<services>
-		<service>
-			<usesidentifier>Log_Service</usesidentifier>
-			<findby>
-				<domainfinder type="log" name="Log_Service" />
-			</findby>
-		</service>
-	</services>
-	<nameservice name="Naming_Service" id="DCE:9179e874-373d-4e81-9158-f4ba8effbe19:1">
+	<services />
+	<nameservice name="Naming_Service" id="DCE:8707b333-9af1-457b-9da4-7282668c4f0e:1">
 		<usesidentifier>Naming_Service</usesidentifier>
 		<localfile name="" />
 	</nameservice>

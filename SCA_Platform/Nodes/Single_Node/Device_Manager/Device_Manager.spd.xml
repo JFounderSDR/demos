@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<softpkg id="DCE:c4321d26-af18-4580-b619-31fa7c56a20b:1" name="Device_Manager" type="sca_compliant">
+<softpkg id="DCE:ead97e39-206a-4352-ae7c-506b90a7f904:1" name="Device_Manager" type="sca_compliant">
 	<title>Device_Manager</title>
 	<description />
 	<author />
@@ -9,7 +9,7 @@
 	<descriptor type="SCD">
 		<localfile name="Device_Manager.scd.xml" />
 	</descriptor>
-	<implementation id="DCE:a7f0bed9-75b5-42d0-b37f-9894e25b602c:1" aepcompliance="sca_compliant">
+	<implementation id="DCE:241b5015-f3eb-46d7-8c4e-dde05729785d:1" aepcompliance="sca_compliant">
 		<code type="Executable">
 			<localfile name="Device_Manager.out" />
 			<entrypoint>Device_Manager_Main</entrypoint>

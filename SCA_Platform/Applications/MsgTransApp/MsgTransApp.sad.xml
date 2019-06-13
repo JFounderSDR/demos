@@ -17,7 +17,7 @@
 	<partitioning>
 		<componentplacement>
 			<componentfileref refid="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1" />
-			<componentinstantiation id="DCE:36d656f4-023f-45ae-8575-857f49870d57:1">
+			<componentinstantiation id="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1">
 				<usagename>CRCComp</usagename>
 				<findcomponent>
 					<namingservice name="CRCComp" />
@@ -26,7 +26,7 @@
 		</componentplacement>
 		<componentplacement>
 			<componentfileref refid="DCE:8fda3b57-2559-4bef-a2a7-66546708d05e:1" />
-			<componentinstantiation id="DCE:a6350ad3-e550-41d7-887c-7186017aa57a:1">
+			<componentinstantiation id="DCE:8fda3b57-2559-4bef-a2a7-66546708d05e:1">
 				<usagename>MsgTrans_Ctroller</usagename>
 				<findcomponent>
 					<namingservice name="MsgTrans_Ctroller" />
@@ -35,7 +35,7 @@
 		</componentplacement>
 		<componentplacement>
 			<componentfileref refid="DCE:7812fa3d-453c-492b-bfce-0e9c21b65ad8:1" />
-			<componentinstantiation id="DCE:69a7e05d-09bc-4cb6-986c-7038f5c8fc30:1">
+			<componentinstantiation id="DCE:7812fa3d-453c-492b-bfce-0e9c21b65ad8:1">
 				<usagename>Modem</usagename>
 				<findcomponent>
 					<namingservice name="Modem" />
@@ -44,17 +44,10 @@
 		</componentplacement>
 	</partitioning>
 	<assemblycontroller>
-		<componentinstantiationref refid="DCE:a6350ad3-e550-41d7-887c-7186017aa57a:1" />
+		<componentinstantiationref refid="DCE:8fda3b57-2559-4bef-a2a7-66546708d05e:1" />
 	</assemblycontroller>
 	<connections>
-		<connectinterface id="DCE:337b355f-dda5-4d14-aae7-aa54585a53ec:1">
-			<providesport>
-				<providesidentifier>data_in</providesidentifier>
-				<componentinstantiationref refid="DCE:36d656f4-023f-45ae-8575-857f49870d57:1" />
-				<findby>
-					<namingservice name="CRCComp/data_in" />
-				</findby>
-			</providesport>
+		<connectinterface id="DCE:a22cfd02-5831-4be0-883e-44ca4942a428:1">
 			<providesport>
 				<providesidentifier>external_data_in</providesidentifier>
 				<componentinstantiationref refid="DCE:fa54eec3-b792-4e24-aec9-c66d997c8911:1" />
@@ -62,24 +55,31 @@
 					<namingservice name="MsgTransApp/external_data_in" />
 				</findby>
 			</providesport>
+			<providesport>
+				<providesidentifier>data_in</providesidentifier>
+				<componentinstantiationref refid="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1" />
+				<findby>
+					<namingservice name="CRCComp/data_in" />
+				</findby>
+			</providesport>
 		</connectinterface>
-		<connectinterface id="DCE:f4794460-759a-4ec2-bd2f-655af83a502b:1">
+		<connectinterface id="DCE:0064dca4-4b79-451a-9e82-9b7060cb3c7b:1">
 			<usesport>
 				<usesidentifier>mhal_axi_data_out</usesidentifier>
-				<componentinstantiationref refid="DCE:69a7e05d-09bc-4cb6-986c-7038f5c8fc30:1" />
+				<componentinstantiationref refid="DCE:7812fa3d-453c-492b-bfce-0e9c21b65ad8:1" />
 				<findby>
 					<namingservice name="MHAL_Device/mhal_axi_data_out" />
 				</findby>
 			</usesport>
 			<providesport>
 				<providesidentifier>data_mhal_axi_in</providesidentifier>
-				<componentinstantiationref refid="DCE:36d656f4-023f-45ae-8575-857f49870d57:1" />
+				<componentinstantiationref refid="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1" />
 				<findby>
 					<namingservice name="CRCComp/data_mhal_axi_in" />
 				</findby>
 			</providesport>
 		</connectinterface>
-		<connectinterface id="DCE:cbc7be16-305b-4a1a-88d2-ac1028931719:1">
+		<connectinterface id="DCE:3d3f2e81-8a3c-4ba6-ae13-b7856982da27:1">
 			<usesport>
 				<usesidentifier>external_data_out</usesidentifier>
 				<componentinstantiationref refid="DCE:fa54eec3-b792-4e24-aec9-c66d997c8911:1" />
@@ -89,53 +89,53 @@
 			</usesport>
 			<usesport>
 				<usesidentifier>data_out</usesidentifier>
-				<componentinstantiationref refid="DCE:36d656f4-023f-45ae-8575-857f49870d57:1" />
+				<componentinstantiationref refid="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1" />
 				<findby>
 					<namingservice name="CRCComp/data_out" />
 				</findby>
 			</usesport>
 		</connectinterface>
-		<connectinterface id="DCE:34dad2d5-c172-4830-9e89-7c0078c0a15d:1">
+		<connectinterface id="DCE:53a3fb96-ebc1-4a50-b4c6-e72ebfb6a7f7:1">
 			<usesport>
 				<usesidentifier>data_mhal_axi_out</usesidentifier>
-				<componentinstantiationref refid="DCE:36d656f4-023f-45ae-8575-857f49870d57:1" />
+				<componentinstantiationref refid="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1" />
 				<findby>
 					<namingservice name="CRCComp/data_mhal_axi_out" />
 				</findby>
 			</usesport>
 			<providesport>
 				<providesidentifier>mhal_axi_data_in</providesidentifier>
-				<componentinstantiationref refid="DCE:69a7e05d-09bc-4cb6-986c-7038f5c8fc30:1" />
+				<componentinstantiationref refid="DCE:7812fa3d-453c-492b-bfce-0e9c21b65ad8:1" />
 				<findby>
 					<namingservice name="MHAL_Device/mhal_axi_data_in" />
 				</findby>
 			</providesport>
 		</connectinterface>
-		<connectinterface id="DCE:1aaed87e-6aed-40e4-a54d-a08bce9a74a7:1">
+		<connectinterface id="DCE:b058b0a2-8090-4a22-a487-caf4b07883f6:1">
 			<usesport>
 				<usesidentifier>control_out</usesidentifier>
-				<componentinstantiationref refid="DCE:a6350ad3-e550-41d7-887c-7186017aa57a:1" />
+				<componentinstantiationref refid="DCE:8fda3b57-2559-4bef-a2a7-66546708d05e:1" />
 				<findby>
 					<namingservice name="MsgTrans_Ctroller/control_out" />
 				</findby>
 			</usesport>
 			<providesport>
 				<providesidentifier>control_in</providesidentifier>
-				<componentinstantiationref refid="DCE:36d656f4-023f-45ae-8575-857f49870d57:1" />
+				<componentinstantiationref refid="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1" />
 			</providesport>
 		</connectinterface>
 	</connections>
 	<externalports>
 		<port>
 			<usesidentifier>external_data_out</usesidentifier>
-			<componentinstantiationref refid="DCE:36d656f4-023f-45ae-8575-857f49870d57:1" />
+			<componentinstantiationref refid="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1" />
 			<findby>
 				<namingservice name="MsgTransApp/external_data_out" />
 			</findby>
 		</port>
 		<port>
 			<providesidentifier>external_data_in</providesidentifier>
-			<componentinstantiationref refid="DCE:36d656f4-023f-45ae-8575-857f49870d57:1" />
+			<componentinstantiationref refid="DCE:9daf8086-91dc-4406-9d89-3d48565c5c1a:1" />
 			<findby>
 				<namingservice name="MsgTransApp/external_data_in" />
 			</findby>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<softpkg id="DCE:8b577a13-45ec-4844-a666-9c731682a694:1" name="Domain_Manager" type="sca_compliant">
+<softpkg id="DCE:ce0cbc47-4c53-480a-b950-c90319d0f393:1" name="Domain_Manager" type="sca_compliant">
 	<title>Domain_Manager</title>
 	<description />
 	<author />
@@ -9,7 +9,7 @@
 	<descriptor type="SCD">
 		<localfile name="Domain_Manager.scd.xml" />
 	</descriptor>
-	<implementation id="DCE:8a6d4926-7b77-4fec-a322-0c1d8e0c2690:1" aepcompliance="sca_compliant">
+	<implementation id="DCE:4b4543b7-8a8d-4ffb-904d-441560f36361:1" aepcompliance="sca_compliant">
 		<code type="Executable">
 			<localfile name="Domain_Manager.out" />
 			<entrypoint>Domain_Manager_Main</entrypoint>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<devicepkg id="DCE:617cf17c-2a81-4241-bf7f-e051e8c295f8:1" name="U1_Zynq7035_PL">
+<devicepkg id="DCE:1d08113b-b070-4a83-ad0a-a7422e18f984:1" name="U1_Zynq7035_PL">
 	<author>open Team</author>
 	<hwdeviceregistration id="DCE:e340a6a8-08c5-41ef-b211-b4c11d3da690:1" name="" version="">
 		<descriptor />
