@@ -18,5 +18,15 @@
 		<units>Mbps</units>
 		<kind kindtype="configure" />
 	</simple>
+	<simple type="float" id="DCE:df259beb-0a80-45d9-8bc5-e09421be0804:1" name="max_business_rate" mode="readwrite">
+		<value>1.6</value>
+		<units>Mbps</units>
+		<kind kindtype="configure" />
+	</simple>
+	<simple type="float" id="DCE:003bf48a-44ab-4aa4-abf4-0d909d18f9c2:1" name="max_mhal_packet_size" mode="readwrite">
+		<value>1.6</value>
+		<units>K</units>
+		<kind kindtype="configure" />
+	</simple>
 </properties>
 
