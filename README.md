@@ -6,7 +6,7 @@
 
 
 > #### AudioTransApp应用由以下组件组成：<br>
-1）AudioTrans_Ctroller 音频压缩波形控制器组件<br>
+> 1）AudioTrans_Ctroller 音频压缩波形控制器组件<br>
 作用：控制 AudioCodeCComp组件和 CRCComp组件<br>
 2）AudioCodeCComp 音频压缩组件<br>
 作用：通过压缩算法，对音频数据压缩，压缩比可调整，分别为2:1、16:5<br>
@@ -14,13 +14,13 @@
 作用：在传输数据前添加CRC校验头，保证数据的可靠性<br>
 > 
 > #### ImageTransApp应用由以下组件组成：<br>
-1）ImageTrans_Ctroller 视频波形控制器组件<br>
+> 1）ImageTrans_Ctroller 视频波形控制器组件<br>
 作用：控制 RxTxComp组件<br>
 2）RxTxComp 收发组件<br>
 作用：对视频数据校验，剔除丢失数据组<br>
 >
 > #### MsgTransApp应用由以下组件组成：<br>
-1）MsgTrans_Ctroller 报文波形控制器组件<br>
+> 1）MsgTrans_Ctroller 报文波形控制器组件<br>
 作用：控制 CRCComp组件<br>
 2）CRCComp CRC校验组件<br>
 作用：在传输数据前添加CRC校验头，保证数据的可靠性<br>
