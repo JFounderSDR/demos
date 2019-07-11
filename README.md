@@ -4,8 +4,8 @@
 ## 平台包简介
 1. 平台包包含3个点对点波形：AudioTransApp、ImageTransApp、MsgTransApp，分别用于传输语音、视频和报文。<br>
 
-> 
-### AudioTransApp应用由以下组件组成：<br>
+
+> ### AudioTransApp应用由以下组件组成：<br>
 
 1）AudioTrans_Ctroller 音频压缩波形控制器组件<br>
 作用：控制 AudioCodeCComp组件和 CRCComp组件<br>
