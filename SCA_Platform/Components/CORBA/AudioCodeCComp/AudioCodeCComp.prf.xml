@@ -11,7 +11,7 @@
 		<kind kindtype="allocation" />
 		<action type="eq" />
 	</simple>
-	<simple type="ushort" id="DCE:bf8f6671-ab8c-45c1-ba6d-fe4b5e67f875:1" name="audio_compression_ratio" mode="readonly">
+	<simple type="ushort" id="DCE:bf8f6671-ab8c-45c1-ba6d-fe4b5e67f875:1" name="audio_compression_ratio" mode="readwrite">
 		<value>1</value>
 		<units />
 		<kind kindtype="configure" />

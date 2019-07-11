@@ -1,0 +1,3 @@
+1. 更改AudioCodeCComp组件的audio_compression_ratio模型属性，由只读改为读写
+2. 更改U1_Zynq7035_PS_MHAL_Device设备的max_business_rate和max_mhal_packet_size模型属性，由只读改为读写
+3. 将以上三个模型属性，增加可配置操作
