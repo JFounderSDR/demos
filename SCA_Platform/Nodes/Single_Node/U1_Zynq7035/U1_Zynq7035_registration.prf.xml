@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE properties SYSTEM "../dtd/properties.dtd">
-
-<properties>
-	<title>U1_Zynq7035</title>
-	<description>Adds BPSK preamble header information for assembling frames</description>
-	<author>open Team</author>
-</properties>
-
