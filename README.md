@@ -1,6 +1,6 @@
 # demos
 提供了一个完整的可运行的平台包，用户可直接将此平台包拷贝至jLab实验平台中运行。<br>
-现支持两种版本操作系统：PetaLinux2015.4、jLinux
+现支持两种版本操作系统：PetaLinux2015.4、jLinux。
 
 ## 平台包简介
 1. 平台包包含3个点对点波形：AudioTransApp、ImageTransApp、MsgTransApp，分别用于传输语音、视频和报文。<br>
