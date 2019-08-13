@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE softwareassembly SYSTEM "../../xml/dtd/softwareassembly.dtd">
+
+<deviceconfiguration name="Single_Node" id="DCE:3b1cbc9d-eda0-434b-84c4-ff2f6884adc2:1">
+	<author />
+	<devicemanagersoftpkg>
+		<localfile name="Device_Manager.spd.xml" />
+	</devicemanagersoftpkg>
+	<componentfiles>
+		<componentfile type="SPD" id="DCE:4f6fb58d-6acb-4f53-a8c5-0393e757b044:1">
+			<localfile name="../U1_AD9371/U1_AD9371.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:61c9e2cf-1798-4b05-aeda-8b189eac1f88:1">
+			<localfile name="../U1_Zynq7035_PL/U1_Zynq7035_PL.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:f84672e3-6189-4b61-986d-91855fdf652f:1">
+			<localfile name="../U1_Zynq7035/U1_Zynq7035.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:e1c88066-e4b9-43f0-bbfa-5a872ce0ee4b:1">
+			<localfile name="../U1_Zynq7035_PS/U1_Zynq7035_PS.spd.xml" />
+		</componentfile>
+		<componentfile type="SPD" id="DCE:d1577abd-ed36-41af-aeff-a9a934553277:1">
+			<localfile name="../U1_Zynq7035_PS_MHAL_Device/MHAL_Device.spd.xml" />
+		</componentfile>
+	</componentfiles>
+	<partitioning>
+		<componentplacement>
+			<componentfileref refid="DCE:4f6fb58d-6acb-4f53-a8c5-0393e757b044:1" />
+			<componentinstantiation id="DCE:56d51207-1b34-4750-a616-068622834a5c:1">
+				<usagename>U1_AD9371</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../U1_AD9371/U1_AD9371.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:61c9e2cf-1798-4b05-aeda-8b189eac1f88:1" />
+			<componentinstantiation id="DCE:c47fe5b5-8764-4a32-9190-fda8815a6783:1">
+				<usagename>U1_Zynq7035_PL</usagename>
+			</componentinstantiation>
+			<compositepartofdevice refid="DCE:9051a661-cab7-4c30-a3d8-1a45f4557115:1" />
+			<deployondevice refid="DCE:9051a661-cab7-4c30-a3d8-1a45f4557115:1" />
+			<devicepkgfile>
+				<localfile name="../U1_Zynq7035_PL/U1_Zynq7035_PL.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:f84672e3-6189-4b61-986d-91855fdf652f:1" />
+			<componentinstantiation id="DCE:9051a661-cab7-4c30-a3d8-1a45f4557115:1">
+				<usagename>U1_Zynq7035</usagename>
+			</componentinstantiation>
+			<devicepkgfile>
+				<localfile name="../U1_Zynq7035/U1_Zynq7035.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:e1c88066-e4b9-43f0-bbfa-5a872ce0ee4b:1" />
+			<componentinstantiation id="DCE:769a5d7e-cc14-4ac9-b21f-e3682b3606e7:1">
+				<usagename>U1_Zynq7035_PS</usagename>
+			</componentinstantiation>
+			<compositepartofdevice refid="DCE:9051a661-cab7-4c30-a3d8-1a45f4557115:1" />
+			<deployondevice refid="DCE:9051a661-cab7-4c30-a3d8-1a45f4557115:1" />
+			<devicepkgfile>
+				<localfile name="../U1_Zynq7035_PS/U1_Zynq7035_PS.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+		<componentplacement>
+			<componentfileref refid="DCE:d1577abd-ed36-41af-aeff-a9a934553277:1" />
+			<componentinstantiation id="DCE:845c8817-eecc-49e0-8150-28768e95672f:1">
+				<usagename>MHAL_Device</usagename>
+			</componentinstantiation>
+			<compositepartofdevice refid="DCE:769a5d7e-cc14-4ac9-b21f-e3682b3606e7:1" />
+			<deployondevice refid="DCE:769a5d7e-cc14-4ac9-b21f-e3682b3606e7:1" />
+			<devicepkgfile>
+				<localfile name="../U1_Zynq7035_PS_MHAL_Device/MHAL_Device.dpd.xml" />
+			</devicepkgfile>
+		</componentplacement>
+	</partitioning>
+	<connections />
+	<domainmanager>
+		<namingservice name="Domain_Manager" />
+	</domainmanager>
+	<filesystemnames>
+		<filesystemname mountname="/d/NFS/" deviceid="" />
+	</filesystemnames>
+</deviceconfiguration>
+

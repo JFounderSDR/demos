@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devicepkg id="DCE:aac720fa-f956-4938-978c-91793b86b9f1:1" name="U1_AD9371">
+	<author>open Team</author>
+	<hwdeviceregistration id="DCE:99ee4734-1e3a-47bc-a914-5c95d5489245:1" name="" version="">
+		<descriptor />
+		<propertyfile type="property">
+			<localfile name="U1_AD9371_registration.prf.xml" />
+		</propertyfile>
+		<manufacturer />
+		<modelnumber />
+		<deviceclass />
+	</hwdeviceregistration>
+</devicepkg>
+

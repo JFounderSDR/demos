@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:ead97e39-206a-4352-ae7c-506b90a7f904:1" name="Device_Manager" type="sca_compliant">
+	<title>Device_Manager</title>
+	<description />
+	<author />
+	<propertyfile type="PRF">
+		<localfile name="Device_Manager.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="Device_Manager.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:241b5015-f3eb-46d7-8c4e-dde05729785d:1" aepcompliance="sca_compliant">
+		<code type="Executable">
+			<localfile name="Device_Manager.out" />
+			<entrypoint>Device_Manager_Main</entrypoint>
+			<stacksize>40960</stacksize>
+			<priority>101</priority>
+		</code>
+		<os name="Linux" version="4.1" />
+		<processor name="Zynq7035-PS" />
+	</implementation>
+</softpkg>
+

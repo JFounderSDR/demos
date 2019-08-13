@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:819cd06e-f83b-4e66-a475-7e0fec8062a3:1" name="Naming_Service">
+	<title>Naming_Service</title>
+	<description />
+	<author />
+	<propertyfile type="PRF">
+		<localfile name="Naming_Service.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="Naming_Service.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:bbe637ae-5d37-4e4e-a61e-53dc58b14795:1">
+		<description />
+		<code type="Executable">
+			<localfile name="Naming_Service.out" />
+			<entrypoint>Naming_Service_Main</entrypoint>
+			<stacksize>20480</stacksize>
+			<priority>101</priority>
+		</code>
+		<os name="Linux" version="4.1" />
+		<processor name="Zynq7035-PS" />
+	</implementation>
+</softpkg>
+

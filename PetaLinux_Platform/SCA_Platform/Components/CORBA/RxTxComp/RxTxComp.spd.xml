@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:2a8f3070-b9c8-469f-bbae-f28b06f1c275:1" name="RxTxComp" type="sca_compliant">
+	<title>RxTxComp</title>
+	<description />
+	<author>open Team</author>
+	<propertyfile type="PRF">
+		<localfile name="RxTxComp.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="RxTxComp.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:51093ae6-b343-4b8f-a7de-267200ca504f:1" aepcompliance="sca_compliant">
+		<code type="Executable">
+			<localfile name="RxTxComp.out" />
+			<entrypoint>RxTxComp_Main</entrypoint>
+			<stacksize>40960</stacksize>
+			<priority>101</priority>
+		</code>
+		<os name="Linux" version="4.1" />
+		<processor name="Zynq7035-PS" />
+	</implementation>
+</softpkg>
+
