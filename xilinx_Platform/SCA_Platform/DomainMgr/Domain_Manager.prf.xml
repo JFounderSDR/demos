@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE properties SYSTEM "../dtd/properties.dtd">
-
-<properties>
-	<title>Domain_Manager</title>
-	<description>Adds BPSK preamble header information for assembling frames</description>
-	<author>opensca is belong to everyone</author>
-</properties>
-
