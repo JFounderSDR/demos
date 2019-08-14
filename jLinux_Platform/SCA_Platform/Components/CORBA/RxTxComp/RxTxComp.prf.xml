@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "../dtd/properties.dtd">
+
+<properties>
+	<title>RxTxComp</title>
+	<description>Adds BPSK preamble header information for assembling frames</description>
+	<author>open Team</author>
+	<simple type="string" id="DCE:7a2cb7bd-d184-47ba-9a19-14a0f94e6286:1" name="soc_model" mode="readonly">
+		<value>XC7Z035</value>
+		<units />
+		<kind kindtype="allocation" />
+		<action type="eq" />
+	</simple>
+	<simple type="float" id="DCE:8b91015a-b0cd-47eb-b475-c44c70bb56a4:1" name="block_error_rate" mode="readonly">
+		<value>0.00</value>
+		<units />
+		<kind kindtype="configure" />
+	</simple>
+	<simple type="ushort" id="DCE:f5bb1094-a1f4-4210-8b1e-c53a001b7cc9:1" name="data_mhal_axi_out_target_LD" mode="readonly">
+		<value>0x04a0</value>
+		<kind kindtype="configure" />
+	</simple>
+	<simple type="ushort" id="DCE:684c7e2a-a7d6-4642-ba00-729f5263661f:1" name="data_mhal_axi_in_local_LD" mode="readonly">
+		<value>0x0520</value>
+		<kind kindtype="configure" />
+	</simple>
+</properties>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:19c539c4-5ead-4089-82d5-3c72106ca289:1" name="Modem" type="sca_non_compliant">
+	<title>Modem</title>
+	<description />
+	<author />
+	<propertyfile type="PRF">
+		<localfile name="Modem.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="Modem.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:d90399b3-0c06-4e1c-88ee-af8ef1e01d13:1" aepcompliance="sca_non_compliant">
+		<code type="Executable">
+			<localfile name="Modem.bit" />
+		</code>
+		<os name="Linux" version="4.1" />
+		<processor name="Zynq7035-PL" />
+	</implementation>
+</softpkg>
+

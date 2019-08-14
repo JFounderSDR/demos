@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:9051a661-cab7-4c30-a3d8-1a45f4557115:1" name="Zynq7035" type="sca_compliant">
+	<title>Zynq7035</title>
+	<description />
+	<author>open Team</author>
+	<propertyfile type="PRF">
+		<localfile name="Zynq7035.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="Zynq7035.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:76f6a43b-9eb7-4d7a-a19a-4b2fa871a7dc:1" aepcompliance="sca_compliant">
+		<code type="Executable">
+			<localfile name="Zynq7035.out" />
+			<entrypoint>Zynq7035_Main</entrypoint>
+			<stacksize>40960</stacksize>
+			<priority>101</priority>
+		</code>
+		<os name="Linux" version="4.1" />
+		<processor name="Zynq7035-PS" />
+	</implementation>
+</softpkg>
+

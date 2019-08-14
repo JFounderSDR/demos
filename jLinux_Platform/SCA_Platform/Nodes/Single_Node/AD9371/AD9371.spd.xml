@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:56d51207-1b34-4750-a616-068622834a5c:1" name="AD9371" type="sca_compliant">
+	<title>AD9371</title>
+	<description />
+	<author>open Team</author>
+	<propertyfile type="PRF">
+		<localfile name="AD9371.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="AD9371.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:c186d91b-0571-40b6-91f9-728bb19af325:1" aepcompliance="sca_compliant">
+		<code type="Executable">
+			<localfile name="AD9371.out" />
+			<entrypoint>AD9371_Main</entrypoint>
+			<stacksize>40960</stacksize>
+			<priority>101</priority>
+		</code>
+		<os name="Linux" version="4.1" />
+		<processor name="Zynq7035-PS" />
+	</implementation>
+</softpkg>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softpkg id="DCE:db920d96-163c-40a3-9637-739140f1c198:1" name="TxComp" type="sca_compliant">
+	<title>TxComp</title>
+	<description />
+	<author />
+	<propertyfile type="PRF">
+		<localfile name="TxComp.prf.xml" />
+	</propertyfile>
+	<descriptor type="SCD">
+		<localfile name="TxComp.scd.xml" />
+	</descriptor>
+	<implementation id="DCE:b01f38ba-7eae-4e30-93b2-c0e13feda2ad:1" aepcompliance="sca_compliant">
+		<code type="Executable">
+			<localfile name="TxComp.out" />
+			<entrypoint>TxComp_Main</entrypoint>
+			<stacksize>40960</stacksize>
+			<priority>101</priority>
+		</code>
+		<os name="Linux" version="4.1" />
+		<processor name="Zynq7035-PS" />
+	</implementation>
+</softpkg>
+

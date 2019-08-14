@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE softwarecomponent SYSTEM "../../../dtd/softwarecomponent.dtd">
+
+<softwarecomponent>
+	<corbaversion>2.2</corbaversion>
+	<componentrepid repid="IDL:CF/Device:1.0" />
+	<componenttype>device</componenttype>
+	<componentfeatures>
+		<supportsinterface supportsname="Device" repid="IDL:CF/Device:1.0" />
+		<supportsinterface supportsname="Resource" repid="IDL:CF/Resource:1.0" />
+		<supportsinterface supportsname="LifeCycle" repid="IDL:CF/LifeCycle:1.0" />
+		<supportsinterface supportsname="PortSupplier" repid="IDL:CF/PortSupplier:1.0" />
+		<supportsinterface supportsname="PropertySet" repid="IDL:CF/PropertySet:1.0" />
+		<supportsinterface supportsname="TestableObject" repid="IDL:CF/TestableObject:1.0" />
+		<ports>
+			<uses usesname="mhal_axi_data_out" repid="IDL:standardInterfaces/MHAL_PF_u:1.0">
+				<porttype type="data" />
+			</uses>
+			<provides providesname="mhal_axi_data_in" repid="IDL:standardInterfaces/MHAL_PF_p:1.0">
+				<porttype type="data" />
+			</provides>
+		</ports>
+	</componentfeatures>
+	<interfaces>
+		<interface name="Device" repid="IDL:CF/Device:1.0">
+			<!--[Inherited interface IDL:CF/Resource:1.0]-->
+			<inheritsinterface repid="IDL:CF/Resource:1.0" />
+		</interface>
+		<interface name="MHAL_PF_u" repid="IDL:standardInterfaces/MHAL_PF_u:1.0" />
+		<interface name="MHAL_PF_p" repid="IDL:standardInterfaces/MHAL_PF_p:1.0" />
+	</interfaces>
+</softwarecomponent>
+
